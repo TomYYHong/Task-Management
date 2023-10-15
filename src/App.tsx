@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import "./App.css";
@@ -15,6 +15,13 @@ export interface Task {
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
+
   const addTask = (newTask: Task) => {
     const formattedDueDate = new Date(newTask.dueDate);
 
@@ -27,11 +34,16 @@ function App() {
 
     // Add the task to the tasks array
     setTasks([...tasks, taskWithFormattedDate]);
+    localStorage.setItem(
+      "tasks",
+      JSON.stringify([...tasks, taskWithFormattedDate])
+    );
   };
 
   const deleteTask = (id: string) => {
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
   return (
