@@ -1,27 +1,9 @@
-# React + TypeScript + Vite
+# Tech Stack: React, TypeScript, Formik, and Yup
+https://task-management-tomhong.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/TomYYHong/Task-Management/assets/56811243/cb876f88-eb00-40b2-9e77-991b2e58cc72)
+![image](https://github.com/TomYYHong/Task-Management/assets/56811243/01b926bd-858b-46a5-ac3f-777f4480a4bd)
+![image](https://github.com/TomYYHong/Task-Management/assets/56811243/2a7ab20f-0778-45e2-95b2-463375a1c5d1)
+![image](https://github.com/TomYYHong/Task-Management/assets/56811243/a05e9b58-a9cc-47c0-b5ce-12da38c64793)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
